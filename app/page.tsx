@@ -1,15 +1,14 @@
 import Link from "next/link";
 import {
   Brain,
-  ShieldCheck,
   Upload,
   MessageCircleQuestion,
   BadgeCheck,
   ArrowRight,
   ArrowDown,
-  FileText,
   BarChart2,
 } from "lucide-react";
+import HeroDemo from "@/components/HeroDemo";
 
 export const metadata = {
   title: "Recall — Ask your notes anything",
@@ -82,43 +81,8 @@ export default function Landing() {
               </p>
             </div>
 
-            {/* Product mock */}
-            <div className="bg-card border border-border rounded-2xl shadow-card overflow-hidden">
-              <div className="px-4 py-3 border-b border-border flex items-center gap-2">
-                <FileText className="w-3.5 h-3.5 text-muted" />
-                <span className="text-xs font-mono text-muted">
-                  data-structures.pdf
-                </span>
-                <span className="ml-auto text-[10px] font-mono uppercase tracking-widest text-muted">
-                  Recall
-                </span>
-              </div>
-              <div className="p-4 sm:p-6 flex flex-col gap-4">
-                <div className="self-end max-w-[85%] bg-primary text-white px-4 py-3 rounded-2xl rounded-tr-md text-sm leading-relaxed">
-                  What&apos;s the difference between a stack and a queue?
-                </div>
-                <div className="self-start">
-                  <div className="bg-background border border-border border-l-2 border-l-primary px-4 py-3 rounded-2xl rounded-tl-md text-sm leading-relaxed">
-                    According to your notes, a <strong>stack</strong> is LIFO —
-                    the last element pushed is the first popped, like the
-                    undo-history example on page 3. A <strong>queue</strong> is
-                    FIFO — elements leave in the order they arrived.
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-2 px-1 flex-wrap">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-accent">
-                      <ShieldCheck className="w-3 h-3" />
-                      Grounded in
-                    </span>
-                    <span className="text-xs px-2 py-0.5 rounded-md bg-accent/5 border border-border font-mono">
-                      data-structures.pdf
-                    </span>
-                  </div>
-                </div>
-                <div className="self-end max-w-[85%] bg-primary text-white px-4 py-3 rounded-2xl rounded-tr-md text-sm leading-relaxed">
-                  Quiz me on that
-                </div>
-              </div>
-            </div>
+            {/* Product mock — animated, looping demo */}
+            <HeroDemo />
           </div>
         </div>
         <a
