@@ -16,7 +16,7 @@ create table if not exists chunks (
   document_id uuid references documents(id) on delete cascade,
   document_name text not null,
   content text not null,
-  embedding vector(1536),
+  embedding vector(768),
   chunk_index integer,
   created_at timestamptz default now()
 );
@@ -28,7 +28,7 @@ create index if not exists chunks_embedding_idx
 
 -- Match chunks function used for retrieval
 create or replace function match_chunks(
-  query_embedding vector(1536),
+  query_embedding vector(768),
   match_count int default 5,
   filter_doc_id uuid default null
 )
