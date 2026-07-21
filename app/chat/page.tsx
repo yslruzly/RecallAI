@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import UploadZone from "@/components/UploadZone";
 import DocumentList from "@/components/DocumentList";
 import ChatWindow from "@/components/ChatWindow";
-import { Brain, ShieldCheck, Paperclip, BarChart2, FolderOpen, X } from "lucide-react";
+import { Brain, ShieldCheck, Paperclip, BarChart2, FolderOpen, X, Home as HomeIcon } from "lucide-react";
 
 interface Doc {
   id: string;
@@ -139,6 +139,13 @@ export default function Home() {
               {documents.length} file{documents.length > 1 ? "s" : ""} indexed
             </span>
           )}
+          <a
+            href="/"
+            className="text-xs font-medium text-muted hover:text-primary transition-colors flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-primary/5"
+          >
+            <HomeIcon className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Home</span>
+          </a>
           <a
             href="/dashboard"
             target="_blank"
