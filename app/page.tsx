@@ -52,14 +52,14 @@ export default function Landing() {
       </nav>
 
       {/* Hero — full viewport */}
-      <section className="min-h-[100dvh] flex flex-col brand-glow">
+      <section className="min-h-[100dvh] flex flex-col bg-foreground text-background">
         <div className="flex-1 flex items-center pt-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-10">
             <div className="flex flex-col items-start gap-6">
               <h1 className="text-5xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.05]">
                 Ask your notes anything.
               </h1>
-              <p className="text-base sm:text-lg text-muted leading-relaxed max-w-md">
+              <p className="text-base sm:text-lg opacity-70 leading-relaxed max-w-md">
                 Upload your study notes. Get answers grounded only in what you
                 wrote — never the AI&apos;s imagination — with sources on every
                 reply.
@@ -68,18 +68,18 @@ export default function Landing() {
                 <LoadingLink
                   href="/chat"
                   message="Opening the chat…"
-                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-primary text-white px-6 py-3.5 rounded-xl hover:bg-primary-soft transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-background text-foreground px-6 py-3.5 rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
                 >
                   Start asking <ArrowRight className="w-4 h-4" />
                 </LoadingLink>
                 <a
                   href="#how"
-                  className="inline-flex items-center justify-center text-sm font-medium text-foreground border border-border bg-card px-6 py-3.5 rounded-xl hover:bg-muted-bg transition-colors"
+                  className="inline-flex items-center justify-center text-sm font-medium text-background border border-background/25 px-6 py-3.5 rounded-xl hover:bg-background/10 transition-colors"
                 >
                   See how it works
                 </a>
               </div>
-              <p className="text-[11px] font-mono uppercase tracking-widest text-muted">
+              <p className="text-[11px] font-mono uppercase tracking-widest opacity-50">
                 .pdf · .md · .txt — free to use
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function Landing() {
         <a
           href="#how"
           aria-label="Scroll to how it works"
-          className="mx-auto mb-6 w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center text-muted hover:text-foreground transition-colors animate-bounce"
+          className="mx-auto mb-6 w-10 h-10 rounded-full border border-background/25 flex items-center justify-center text-background/60 hover:text-background hover:bg-background/10 transition-colors animate-bounce"
         >
           <ArrowDown className="w-4 h-4" />
         </a>

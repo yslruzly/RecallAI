@@ -23,7 +23,7 @@ export default function HeroDemo() {
   }, [phase]);
 
   return (
-    <div className="bg-card border border-border rounded-2xl shadow-card overflow-hidden">
+    <div className="bg-card text-foreground border border-border rounded-2xl overflow-hidden">
       {/* Fixed header — never moves */}
       <div className="px-4 py-3 border-b border-border flex items-center gap-2">
         <FileText className="w-3.5 h-3.5 text-muted" />
@@ -80,7 +80,7 @@ export default function HeroDemo() {
                 <ShieldCheck className="w-3 h-3" />
                 Grounded in
               </span>
-              <span className="text-xs px-2 py-0.5 rounded-md bg-accent/5 border border-border font-mono">
+              <span className="text-xs px-2 py-0.5 rounded-md bg-accent/5 border border-border font-mono text-foreground">
                 data-structures.pdf
               </span>
             </div>
