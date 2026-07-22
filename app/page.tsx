@@ -9,6 +9,7 @@ import {
   BarChart2,
 } from "lucide-react";
 import HeroDemo from "@/components/HeroDemo";
+import LoadingLink from "@/components/LoadingLink";
 
 export const metadata = {
   title: "Recall — Ask your notes anything",
@@ -39,12 +40,13 @@ export default function Landing() {
             >
               Quality
             </a>
-            <Link
+            <LoadingLink
               href="/chat"
-              className="text-sm font-semibold bg-primary text-white px-4 py-2 rounded-xl hover:bg-primary-soft transition-colors"
+              message="Opening Recall…"
+              className="text-sm font-semibold bg-primary text-white px-4 py-2 rounded-xl hover:bg-primary-soft transition-colors cursor-pointer"
             >
               Open Recall
-            </Link>
+            </LoadingLink>
           </div>
         </div>
       </nav>
@@ -63,12 +65,13 @@ export default function Landing() {
                 reply.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-                <Link
+                <LoadingLink
                   href="/chat"
-                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-primary text-white px-6 py-3.5 rounded-xl hover:bg-primary-soft transition-colors"
+                  message="Opening the chat…"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold bg-primary text-white px-6 py-3.5 rounded-xl hover:bg-primary-soft transition-colors cursor-pointer"
                 >
                   Start asking <ArrowRight className="w-4 h-4" />
-                </Link>
+                </LoadingLink>
                 <a
                   href="#how"
                   className="inline-flex items-center justify-center text-sm font-medium text-foreground border border-border bg-card px-6 py-3.5 rounded-xl hover:bg-muted-bg transition-colors"
@@ -218,12 +221,13 @@ export default function Landing() {
             <p className="text-sm sm:text-base opacity-70 max-w-md leading-relaxed">
               Stop re-reading 40 pages the night before an exam. Ask instead.
             </p>
-            <Link
+            <LoadingLink
               href="/chat"
-              className="inline-flex items-center gap-2 text-sm font-semibold bg-background text-foreground px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
+              message="Opening Recall…"
+              className="inline-flex items-center gap-2 text-sm font-semibold bg-background text-foreground px-8 py-4 rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
             >
               Open Recall <ArrowRight className="w-4 h-4" />
-            </Link>
+            </LoadingLink>
           </div>
         </div>
         {/* Footer inside the last viewport */}

@@ -4,6 +4,7 @@ import UploadZone from "@/components/UploadZone";
 import DocumentList from "@/components/DocumentList";
 import ChatWindow from "@/components/ChatWindow";
 import { Brain, ShieldCheck, Paperclip, BarChart2, FolderOpen, X, Home as HomeIcon } from "lucide-react";
+import LoadingLink from "@/components/LoadingLink";
 
 interface Doc {
   id: string;
@@ -139,13 +140,14 @@ export default function Home() {
               {documents.length} file{documents.length > 1 ? "s" : ""} indexed
             </span>
           )}
-          <a
+          <LoadingLink
             href="/"
-            className="text-xs font-medium text-muted hover:text-primary transition-colors flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-primary/5"
+            message="Returning home…"
+            className="text-xs font-medium text-muted hover:text-primary transition-colors flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-primary/5 cursor-pointer"
           >
             <HomeIcon className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Home</span>
-          </a>
+          </LoadingLink>
           <a
             href="/dashboard"
             target="_blank"
